@@ -6,7 +6,7 @@
 While these ideas and inferences may never come to fruition, important resulting coversations around ethics, product-design, and/or infrastructure for decentralized self-sovereign identity is amplifed. These discussions are always welcome at Hominid!
 
 ### Why Next.js?
-Nextjs can use well-supported react packages and can be integrated with The Truffle Framework to build ∂Apps. 
+Nextjs can use well-supported react packages and can be integrated with the Truffle Framework to build ∂Apps. 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
