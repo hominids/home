@@ -1,25 +1,27 @@
 import React from 'react';
 import {
-    MinusIcon,
-    HeartIcon,
+    HeartIcon as HeartSolid
   } from "@heroicons/react/solid";
+  import {
+    HeartIcon as HeartOuline
+  } from "@heroicons/react/outline";
 
 const Progress = ({ progress }) => {
   const totalProgress = [];
 
-  for(let i = 0; i < 5; i++) {
+  for(let i = 0; i < 8; i++) {
     if(i < progress) {
       totalProgress.push(
         <li key={i}>
-          <HeartIcon className="w-4 h-4"/>
+          <HeartSolid className="w-4 h-4"/>
         </li>
       );
     } else {
       totalProgress.push(
         <li key={i}>
-          <MinusIcon className="w-4 h-4"/>
+          <HeartOuline className="w-4 h-4"/>
         </li>
-      )
+      );
     }
   }
   return (

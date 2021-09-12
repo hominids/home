@@ -1,15 +1,16 @@
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import VoteCard from './VoteCard';
-import Progress from './Progress';
 
+
+//import data as array of objects
     const data = [
       {
         id: 1,
         title: 'Modern look & trending design',
         description:
           'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-        progress: 5,
+        progress: 8,
       },
       {
         id: 2,
@@ -37,7 +38,7 @@ import Progress from './Progress';
         title: 'Modern look & trending design',
         description:
           'No two sentences should be the same.',
-        progress: 1,
+        progress: 7,
       },
     ];
 
