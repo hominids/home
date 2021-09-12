@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
+//import Image from 'next/image'
 import Header from '../components/Header'
-import Banner from '../components/Banner'
+//import Banner from '../components/Banner'
 //import About from '../components/About'
 import Vote from '../components/Vote'
 
@@ -17,7 +17,7 @@ export default function Home() {
 
       <Header /> 
       
-      <Banner /> 
+      {/* <Banner /> */} 
 
       {/* <About /> */}
 

@@ -1,12 +1,44 @@
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
-import Image from '../components/image'
+import VoteCard from './VoteCard';
 
-    const images = [
-      'https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-      'https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
-      'https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    ]
+    const data = [
+      {
+        id: 1,
+        title: 'Modern look & trending design',
+        description:
+          'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
+        progress: 5,
+      },
+      {
+        id: 2,
+        title: 'Design Quality & performance',
+        description:
+          'how do i get these progress bars to show up properly?',
+        progress: 2,
+      },
+      {
+        id: 3,
+        title: 'Layout and organized layers',
+        description:
+          'whats the deal with airline food, amirite?.',
+        progress: 4,
+      },
+      {
+        id: 4,
+        title: 'Modern look & trending design',
+        description:
+          'earth has a beautiful face and you should go outside every day to say hello.',
+        progress: 3,
+      },
+      {
+        id: 5,
+        title: 'Modern look & trending design',
+        description:
+          'No two sentences should be the same.',
+        progress: 1,
+      },
+    ];
 
     const responsive = {
       superLargeDesktop: {
@@ -30,7 +62,7 @@ import Image from '../components/image'
 
     function Vote () {
     return (
-      <div>
+      <div className="mt-60">
         <Carousel
           autoPlaySpeed={1000}
           responsive={responsive}
@@ -42,16 +74,19 @@ import Image from '../components/image'
           draggable={true}
           keyBoardControl={true}
           minimumTouchDrag={80}
-          containerClass="container-with-dots"
-          itemClass="image-item"
           deviceType={''}
           itemClass="carousel-item-padding-40-px"
           containerClass="carousel-container"
           focusOnSelect={true}
           sliderClass=""
         >
-          {images.map((image) => {
-            return <Image url={image} alt={image} />
+          {data.map((item) => {
+            return <VoteCard 
+              id={item.id}
+              title={item.title}
+              description={item.description} 
+              progress={item.progress}
+            />
           })}
         </Carousel>
       </div>

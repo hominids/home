@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-    MenuIcon,
-  } from "@heroicons/react/outline";
+    HeartIcon,
+  } from "@heroicons/react/solid";
 
 const Progress = ({ progress }) => {
   const totalProgress = [];
@@ -9,20 +9,20 @@ const Progress = ({ progress }) => {
   for(let i = 0; i < 5; i++) {
     if(i < progress) {
       totalProgress.push(
-        <li className="star" key={i}>
-          <MenuIcon />
+        <li key={i}>
+          <HeartIcon />
         </li>
       );
     } else {
       totalProgress.push(
-        <li className="star-o" key={i}>
-          <MenuIcon />
+        <li key={i}>
+          <HeartIcon />
         </li>
       )
     }
   }
   return (
-    <div className="progress">
+    <div className="inline-grid w-4 h-4">
       <ul>{totalProgress}</ul>
     </div>
   );

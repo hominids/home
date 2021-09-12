@@ -1,20 +1,9 @@
-## Hominid Landing Page 🖥 💻 📱
-
-### What is Hominid? - A Human ID? 
-"The only plan is that there is no plan." Hominid is an experimental community that tests and integrates blockchain applications such as the Habitat rollup and its voting modules. The name "Hominid" is derived from the evolutionary branch of great apes in which humans have decended. The name is also a play on the phrase "Human ID", and thus it may fit within the category of an identity management ∂App, much like the [Origin Identity Playground](https://github.com/OriginProtocol/origin-playground), [Universal Profile Accounts](http://universalprofile.cloud/), and/or a multisig that utilizes polymorphic biometric data (fingerprint, eyescan, faceID, voice recognition, etc) and human DNA (buccal swabs / polymerase chain reaction(PCR)) as zero-knowledge signatures. Clearly, identity is a broad term that may encompass many aspects of a human, and thus high transactional throughput may be a preparatory measure for success. While the management of identity on Layer 1 Ethereum would require excessive gas fees, Layer 2 rollups may provide an ideal environment for such applications. 
-
-While these ideas and inferences may never come to fruition, important resulting coversations around ethics, product-design, and/or infrastructure for decentralized self-sovereign identity is amplifed. These discussions are always welcome at Hominid!
-
-### Why Next.js?
-Nextjs can use well-supported react packages and can be integrated with the Truffle Framework to build ∂Apps. 
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
 First, run the development server:
 
-*** suggested: use yarn
 ```bash
 npm run dev
 # or
