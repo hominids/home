@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+    MinusIcon,
     HeartIcon,
   } from "@heroicons/react/solid";
 
@@ -10,20 +11,20 @@ const Progress = ({ progress }) => {
     if(i < progress) {
       totalProgress.push(
         <li key={i}>
-          <HeartIcon />
+          <HeartIcon className="w-4 h-4"/>
         </li>
       );
     } else {
       totalProgress.push(
         <li key={i}>
-          <HeartIcon />
+          <MinusIcon className="w-4 h-4"/>
         </li>
       )
     }
   }
   return (
-    <div className="inline-grid w-4 h-4">
-      <ul>{totalProgress}</ul>
+    <div>
+      <ul className="inline-flex">{totalProgress}</ul>
     </div>
   );
 };
