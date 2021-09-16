@@ -1,6 +1,4 @@
-import {
-    MenuIcon,
-  } from "@heroicons/react/outline";
+import { HiMenu } from "react-icons/hi";
 
 function Header() {
     return (
@@ -12,7 +10,7 @@ function Header() {
                 <div className="flex space-x-4 items-center mx-5">
                     <button className="text-sm text-red-500 border-2 border-red-500 rounded-full bg-transparent py-2 px-4 hover:bg-red-500 hover:text-white transition duration-100 font-body">Demo</button>
 
-                    <MenuIcon className="h-10 w-10 p-2"/>
+                    <HiMenu className="h-10 w-10 p-2"/>
 
             </div>
 

@@ -1,32 +1,27 @@
 import React from 'react';
-import {
-    HeartIcon as HeartSolid
-  } from "@heroicons/react/solid";
-  import {
-    HeartIcon as HeartOuline
-  } from "@heroicons/react/outline";
+import { FaSquare } from "react-icons/fa";
 
 const Progress = ({ progress }) => {
   const totalProgress = [];
 
-  for(let i = 0; i < 8; i++) {
+  for(let i = 0; i < 10; i++) {
     if(i < progress) {
       totalProgress.push(
         <li key={i}>
-          <HeartSolid className="w-4 h-4"/>
+          <FaSquare className="text-green-400 text-xs md:text-base lg:text-lg"/>
         </li>
       );
     } else {
       totalProgress.push(
         <li key={i}>
-          <HeartOuline className="w-4 h-4"/>
+          <FaSquare className="text-transparent text-xs md:text-base lg:text-lg"/>
         </li>
       );
     }
   }
   return (
     <div>
-      <ul className="inline-flex">{totalProgress}</ul>
+      <ul className="flex">{totalProgress}</ul>
     </div>
   );
 };

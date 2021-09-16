@@ -10,7 +10,7 @@ import VoteCard from './VoteCard';
         title: 'Modern look & trending design',
         description:
           'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-        progress: 8,
+        progress: 10,
       },
       {
         id: 2,

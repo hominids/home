@@ -3,12 +3,12 @@ import Progress from './Progress';
 
 const VoteCard = ({ id, title, description, progress }) => {
     return (
-        <div draggable={false} src={id} className="box-content h-50 w-50 p-4 border-4 bg-gray-300">
-            <h1 className="font-bold bg-yellow-200">{title}</h1>
-            <p className="bg-red-300">{description}</p>
-            <div className="bg-blue-500 flex-grid">
-                <Progress progress={progress} />
+        <div draggable={false} src={id} className="grid justify-items-center h-50 w-50 p-4 border-4 bg-gray-100">
+            <div className="flex justify-center p-5">
+              <Progress className="container lg:w-10" progress={progress} />
             </div>
+            <h1 className="p-3 font-bold">{title}</h1>
+            <p className="p-3">{description}</p>
         </div>
   );
   

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import ModalVideo from 'react-modal-video';
-import {
-    PlayIcon,
-  } from "@heroicons/react/solid";
+import { IoIosPlayCircle } from "react-icons/io";
 
 function About() {
 
@@ -47,7 +45,7 @@ function About() {
             {/* video - use odysee video! can probably use https://yarnpkg.com/package/react-modal-video */}
             <div className="grid justify-items-center mt-10 mb-10">
                 <div className="flex items-center justify-center box-content relative bg-video-thumbnail bg-contain z-0 w-96 h-52 rounded" >
-                    <PlayIcon onClick={()=> setOpen(true)} 
+                    <IoIosPlayCircle onClick={()=> setOpen(true)} 
                         className="block object-contain z-50 text-white opacity-60 hover:opacity-80 cursor-pointer fill-current h-24 w-24"
                     />
                 </div>
