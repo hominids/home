@@ -8,20 +8,20 @@ const Progress = ({ progress }) => {
     if(i < progress) {
       totalProgress.push(
         <li key={i}>
-          <FaSquare className="text-green-400 text-xs md:text-base lg:text-lg"/>
+          <FaSquare className="text-green-400 text-base"/>
         </li>
       );
     } else {
       totalProgress.push(
         <li key={i}>
-          <FaSquare className="text-transparent text-xs md:text-base lg:text-lg"/>
+          <FaSquare className="text-transparent text-base"/>
         </li>
       );
     }
   }
   return (
     <div>
-      <ul className="flex">{totalProgress}</ul>
+      <ul className="flex border-2">{totalProgress}</ul>
     </div>
   );
 };

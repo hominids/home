@@ -57,30 +57,34 @@ import VoteCard from './VoteCard';
         items: 2
       },
       mobile: {
-        breakpoint: { max: 464, min: 0 },
+        breakpoint: { max: 664, min: 0 },
         items: 1
       }
     };
 
     function Vote () {
     return (
-      <div className="mt-60">
+      <div className="flex mt-60">
         <Carousel
-          autoPlaySpeed={1000}
           responsive={responsive}
-          centerMode={true}
-          ssr
+          centerMode={false}
+          //additionalTransform={0}
+          //autoPlaySpeed={1000}
+          //ssr
           showDots={true}
           slidesToSlide={1}
           infinite={true}
           draggable={true}
-          keyBoardControl={true}
-          minimumTouchDrag={80}
-          deviceType={''}
-          itemClass="carousel-item-padding-40-px"
-          containerClass="carousel-container"
-          focusOnSelect={true}
-          sliderClass=""
+          //keyBoardControl={true}
+          //minimumTouchDrag={80}
+          //deviceType={''}
+          //partialVisible={true}
+          //removeArrowOnDeviceType={["tablet", "mobile"]}
+          //focusOnSelect={false}
+          itemClass="flex justify-center p-6"
+          containerClass="flex w-screen"
+          sliderClass="react-multi-carousel-track"
+          //dotListClass=""
         >
           {data.map((item) => {
             return <VoteCard 
