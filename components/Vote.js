@@ -10,7 +10,7 @@ import VoteCard from './VoteCard';
         title: 'Modern look & trending design',
         description:
           'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-        progress: 10,
+        progress: 17,
       },
       {
         id: 2,
@@ -24,21 +24,21 @@ import VoteCard from './VoteCard';
         title: 'Layout and organized layers',
         description:
           'whats the deal with airline food, amirite?.',
-        progress: 4,
+        progress: 8,
       },
       {
         id: 4,
         title: 'Modern look & trending design',
         description:
           'earth has a beautiful face and you should go outside every day to say hello.',
-        progress: 3,
+        progress: 12,
       },
       {
         id: 5,
         title: 'Modern look & trending design',
         description:
           'No two sentences should be the same.',
-        progress: 7,
+        progress: 5,
       },
     ];
 
@@ -57,7 +57,7 @@ import VoteCard from './VoteCard';
         items: 2
       },
       mobile: {
-        breakpoint: { max: 664, min: 0 },
+        breakpoint: { max: 630, min: 0 },
         items: 1
       }
     };
@@ -84,6 +84,7 @@ import VoteCard from './VoteCard';
           itemClass="flex justify-center p-6"
           containerClass="flex w-screen"
           sliderClass="react-multi-carousel-track"
+          showDots={false}
           //dotListClass=""
         >
           {data.map((item) => {
