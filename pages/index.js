@@ -3,10 +3,32 @@ import Head from 'next/head'
 import Header from '../components/Header'
 //import Banner from '../components/Banner'
 //import About from '../components/About'
-import Vote from '../components/Vote'
+import Carousel from 'react-multi-carousel';
+import "react-multi-carousel/lib/styles.css";
+import VoteCard from '../components/VoteCard';
+
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 630, min: 0 },
+    items: 1
+  }
+};
 
 
-export default function Home() {
+export default function Home({ proposals }) {
   return (
     <div className="">
       <Head>
@@ -21,7 +43,37 @@ export default function Home() {
 
       {/* <About /> */}
 
-      <Vote />
+      <Carousel
+        responsive={responsive}
+        centerMode={false}
+        ssr
+        showDots={true}
+        slidesToSlide={1}
+        infinite={true}
+        draggable={true}
+        itemClass="flex justify-center p-6"
+        containerClass="flex w-screen mt-60"
+        sliderClass="react-multi-carousel-track"
+        showDots={false}
+        //dotListClass=""
+        //keyBoardControl={true}
+        //minimumTouchDrag={80}
+        //deviceType={''}
+        //partialVisible={true}
+        //removeArrowOnDeviceType={["tablet", "mobile"]}
+        //focusOnSelect={false}
+        //additionalTransform={0}
+        //autoPlaySpeed={1000}
+      >
+        {proposals.map(({number, title, body}) => (
+        <VoteCard 
+          number={number}
+          title={title}
+          body={body} 
+            //progress={item.progress}
+        />
+        ))} 
+      </Carousel>
 
       {/* Vote */}
       {/* Community */}
@@ -31,5 +83,15 @@ export default function Home() {
 
       
     </div>
-  )
-}
+  );
+};
+
+export async function getStaticProps() {
+  const res = await fetch("https://api.github.com/repos/hominids/Improvements-FeatureFarm/issues");
+  const proposals = await res.json();
+  return {
+      props: {
+        proposals,
+      },
+  };
+};

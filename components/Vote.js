@@ -3,45 +3,6 @@ import "react-multi-carousel/lib/styles.css";
 import VoteCard from './VoteCard';
 
 
-//import data as array of objects
-    const data = [
-      {
-        id: 1,
-        title: 'Modern look & trending design',
-        description:
-          'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-        progress: 17,
-      },
-      {
-        id: 2,
-        title: 'Design Quality & performance',
-        description:
-          'how do i get these progress bars to show up properly?',
-        progress: 2,
-      },
-      {
-        id: 3,
-        title: 'Layout and organized layers',
-        description:
-          'whats the deal with airline food, amirite?.',
-        progress: 8,
-      },
-      {
-        id: 4,
-        title: 'Modern look & trending design',
-        description:
-          'earth has a beautiful face and you should go outside every day to say hello.',
-        progress: 12,
-      },
-      {
-        id: 5,
-        title: 'Modern look & trending design',
-        description:
-          'No two sentences should be the same.',
-        progress: 5,
-      },
-    ];
-
     const responsive = {
       superLargeDesktop: {
         // the naming can be any, depends on you.
@@ -62,7 +23,7 @@ import VoteCard from './VoteCard';
       }
     };
 
-    function Vote () {
+    function Vote ({number, title, body}) {
     return (
       <div className="flex mt-60">
         <Carousel
@@ -87,14 +48,12 @@ import VoteCard from './VoteCard';
           showDots={false}
           //dotListClass=""
         >
-          {data.map((item) => {
-            return <VoteCard 
-              id={item.id}
-              title={item.title}
-              description={item.description} 
-              progress={item.progress}
-            />
-          })}
+          <VoteCard 
+            number={number}
+            title={title}
+            body={body} 
+              //progress={item.progress}
+          />
         </Carousel>
       </div>
     )
@@ -102,6 +61,17 @@ import VoteCard from './VoteCard';
   }
 
 /*
+
+{data.map((number, title, body) => {
+  return <VoteCard 
+    number={number}
+    title={title}
+    body={body} 
+    //progress={item.progress}
+  />
+})}
+
+
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import Progress from './Progress';
