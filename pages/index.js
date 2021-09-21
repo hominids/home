@@ -52,7 +52,7 @@ export default function Home({ proposals }) {
         draggable={true}
         itemClass="flex justify-center p-6"
         containerClass="flex w-screen mt-60"
-        sliderClass="react-multi-carousel-track"
+        sliderClass=""
         showDots={false}
         //dotListClass=""
         //keyBoardControl={true}
